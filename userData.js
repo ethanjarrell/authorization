@@ -3,16 +3,16 @@
 module.exports = {
   users: [
     {
-      username: "amy",
-      password: "chihuahua"
+      username: "Darth Vader",
+      password: "evil-overlord"
     },
     {
-      username: "grayson",
-      password: "dinotrux"
+      username: "Stormtrooper",
+      password: "those-were-the-droids"
     },
     {
-      username: "lilamae",
-      password: "aye-aye"
+      username: "Palpatine",
+      password: "more-evil-overlord"
     }
   ]
 }

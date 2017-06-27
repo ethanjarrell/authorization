@@ -1,0 +1,7 @@
+*{
+  font-family: 'Frijole';
+}
+body {
+  background-image: url(star.jpg);
+  background-size: cover;
+}

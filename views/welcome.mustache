@@ -1,1 +1,35 @@
-You are logged in.  Great Job.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="userStyles.css">
+    <title>Directory of Robots</title>
+
+  </head>
+  <body>
+
+<div class="outerContainer">{{#users}}
+  <a href="/users/{{username}}">
+<ul class="profileBox">
+  <li class="image"><img src="{{avatar}}"></img></li>
+  <li><span>Name: </span></li>
+<li class="name">{{name}}</li>
+
+
+<li><span>Email: </span></li>
+<li class="email">{{email}}</li>
+
+<li><span>Favorite Food: </span></li>
+<li class="email">{{favorite food}}</li>
+
+<li><span>Ideal First Date: </span></li>
+<li class="email">{{firstDate}}</li>
+
+</ul>
+  {{/users}}</div>
+
+
+<script type="text/javascript" src="../app/data.js"></script>
+<script type="text/javascript" src="../app/index.js"></script>
+  </body>
+</html>

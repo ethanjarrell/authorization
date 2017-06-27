@@ -4,13 +4,14 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const mustacheExpress = require('mustache-express');
 const data = require('./userData.js');
+const data2 = require('./data.js');
 const app = express();
 
 
 app.engine('mustache', mustacheExpress());
 app.set('views', './views');
 app.set('view engine', 'mustache');
-
+app.use(express.static('./public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -70,7 +71,7 @@ app.post('/', function(req, res){
   var password = req.body.password;
   authenticate(req, username, password);
   if (req.session && req.session.authenticated){
-    res.render('welcome', { username: username });
+    res.render('welcome', { users: data2.users });
   } else {
     res.redirect('/');
   }
